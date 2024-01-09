@@ -340,28 +340,204 @@ function load(){
 	setup();
 }
 
-// EN songs
+// RU songs
+const ru_1980_f_icon = [
+	'medium'
+];
 
+const RU_1980_F_PACK_1 = 1;
+
+let ru_1980_f = [
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Анне Веске',
+		song : "Радоваться жизни"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Анне Веске',
+		song : "Позади крутой поворот"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Валентина Толкунова',
+		song : "Я не могу иначе"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'София Ротару',
+		song : "Было, но прошло"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'София Ротару',
+		song : "Лаванда"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'София Ротару',
+		song : "Только этого мало"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ольга Зарубина',
+		song : "На теплоходе музыка играет"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Алла Пугачёва',
+		song : "А знаешь, всё ещё будет (ft Кристина Орбакайте)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ольга Седова',
+		song : "Радоваться жизни"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Муравьёва',
+		song : "Позвони мне, позвони"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Лариса Долина',
+		song : "Половинка"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Лайма Вайкуле',
+		song : "Вернисаж (ft Валерий Леонтьев)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Аллегрова',
+		song : "Найди меня"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Валентина Легкоступова',
+		song : "Хамелион"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Валентина Легкоступова',
+		song : "Где искать тебя"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Валентина Легкоступова',
+		song : "Хрустальные башмачки"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Понаровская',
+		song : "Музыка любви"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Понаровская',
+		song : "Однажды"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Понаровская',
+		song : "Кроссворд"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Маша Распутина',
+		song : "Городская сумасшедшая"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Маша Распутина',
+		song : "Рыжая корова"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Маша Распутина',
+		song : "Дождь прошёл"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Эдита Пьеха',
+		song : "Город детства"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Эдита Пьеха',
+		song : "Ссорятся люди"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Эдита Пьеха',
+		song : "Дети Земли"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Отиева',
+		song : "Последняя поэма"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Отиева',
+		song : "Карточный домик"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Ирина Отиева',
+		song : "Ведьма-речка"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Алиса Мон',
+		song : "Подорожник"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Алиса Мон',
+		song : "Возьми моё сердце"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Янка Дягилева',
+		song : "От большого ума"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Татьяна Дасковская',
+		song : "Прекрасное Далеко"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Людмила Сенчина',
+		song : "Страна детства"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Алла Пугачёва',
+		song : "Воздушный змей"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Алла Пугачёва',
+		song : "Делу время"
+	}
+];
+
+let ru_1980_f_1 =	ru_1980_f.filter(item => item.pack == 1);
 
 
 let music = [
 	{
-		arr: en_2000_m,
-		lang: 'en',
-		year: '2000',
-		type: 'm',
+		arr: ru_1980_f,
+		lang: 'ru',
+		year: '1980',
+		type: 'f',
 		packs: [
 				{
-					arr: en_2000_m_1,
-					name: 'EN 2000s Male: Pop',
-				},
-				{
-					arr: en_2000_m_2,
-					name: 'EN 2000s Male: Dj',
-				},
-				{
-					arr: en_2000_m_3,
-					name: 'EN 2000s Male: Rap',
+					arr: ru_1980_f,
+					name: 'RU 1980s Female: Medium',
 				}
 			]
 	}
@@ -687,15 +863,15 @@ let generateAudioPath;
 let generateImgPath;
 
 function setup(){
-	lang = 'en';
-	year = '2000';
-	artist_type = 'm';
+	lang = 'ru';
+	year = '1980';
+	artist_type = 'f';
 	back = back_to_packages;
 	modeToggle = toggleArtist;
 	setMedia = setAudio;
 	rightAnswer = rightAnswer_RU;
 	count_time();
-	package_names = en_2000_gr_icon;
+	package_names = ru_1980_f_icon;
 	show_packages(package_names.length);
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
