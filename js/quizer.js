@@ -407,7 +407,8 @@ let ru_1980_f = [
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Лайма Вайкуле',
-		song : "Вернисаж (ft Валерий Леонтьев)"
+		song : "Вернисаж (ft Валерий Леонтьев)",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
@@ -546,14 +547,28 @@ let ru_1980_f = [
 	},
 	{
 		pack : RU_1980_F_PACK_1,
-		group : 'Екатерина Семенова',
-		song : "Чтоб не пил, не курил",
-		year : 1986
+		group : 'Екатерина Семёнова',
+		song : "Чтоб не пил, не курил (1986)"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Ольга Зарубина',
 		song : "Ты приехал (Разлучница-разлука) (1986)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Елена Камбурова',
+		song : "Музыкант (1981)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Елена Камбурова',
+		song : "Разлука (1987)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Екатерина Семёнова',
+		song : "Школьница (1987)"
 	}
 ];
 
@@ -583,6 +598,7 @@ function map_songs(){
 	$('#mirror').hide();
 	$('#map').hide();
 	$('#package_content').hide();
+	$('#sec_15_hist').show();
 	$('#mapping_content').show();
 	toggleLearn();
 	for(var j=0; j < music.length; j++){
@@ -921,6 +937,15 @@ function back_to_browser(){
 function back_to_current_pack(){
 	back = back_to_browser;
 	$('#mapping_content').hide();
+	$('#sec_15_hist').hide();
+	song_stop();
 	$('#map').show();
 	package_num(pack_num);
+}
+
+function song_stop() {
+	if(audio){
+		audio.pause();
+		audio = null;
+	}
 }
