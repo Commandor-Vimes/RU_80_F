@@ -343,10 +343,12 @@ function load(){
 
 // RU songs
 const ru_1980_f_icon = [
-	'medium'
+	'medium',
+	'pop'
 ];
 
 const RU_1980_F_PACK_1 = 1;
+const RU_1980_F_PACK_2 = 2;
 
 let ru_1980_f = [
 	{
@@ -360,7 +362,7 @@ let ru_1980_f = [
 		song : "Позади крутой поворот"
 	},
 	{
-		pack : RU_1980_F_PACK_1,
+		pack : RU_1980_F_PACK_2,
 		group : 'Валентина Толкунова',
 		song : "Я не могу иначе"
 	},
@@ -392,12 +394,14 @@ let ru_1980_f = [
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Ольга Седова',
-		song : "Радоваться жизни"
+		song : "Радоваться жизни",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Ирина Муравьёва',
-		song : "Позвони мне, позвони"
+		song : "Позвони мне, позвони",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
@@ -449,17 +453,20 @@ let ru_1980_f = [
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Маша Распутина',
-		song : "Городская сумасшедшая"
+		song : "Городская сумасшедшая",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Маша Распутина',
-		song : "Рыжая корова"
+		song : "Рыжая корова",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Маша Распутина',
-		song : "Дождь прошёл"
+		song : "Дождь прошёл",
+		ignore : true
 	},
 	{
 		pack : RU_1980_F_PACK_1,
@@ -504,18 +511,18 @@ let ru_1980_f = [
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Янка Дягилева',
-		song : "От большого ума"
+		song : "От большого ума",
+		ignore : true
 	},
 	{
-		pack : RU_1980_F_PACK_1,
+		pack : RU_1980_F_PACK_2,
 		group : 'Татьяна Дасковская',
 		song : "Прекрасное Далеко"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Людмила Сенчина',
-		song : "Страна детства",
-		year : 1984
+		song : "Страна детства (1984)"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
@@ -530,20 +537,17 @@ let ru_1980_f = [
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Людмила Сенчина',
-		song : "День рождения",
-		year : 1982
+		song : "День рождения (1982)"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Людмила Сенчина',
-		song : "Любовь и разлука",
-		year : 1984
+		song : "Любовь и разлука (1984)"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
 		group : 'Роза Рымбаева',
-		song : "Мой дворик",
-		year : 1986
+		song : "Мой дворик (1986)"
 	},
 	{
 		pack : RU_1980_F_PACK_1,
@@ -569,10 +573,51 @@ let ru_1980_f = [
 		pack : RU_1980_F_PACK_1,
 		group : 'Екатерина Семёнова',
 		song : "Школьница (1987)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Роза Рымбаева',
+		song : "Чародеи и факиры (1986)"
+	},
+	{
+		pack : RU_1980_F_PACK_1,
+		group : 'Роза Рымбаева',
+		song : "С тобою, музыка (1986)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Раиса Саед-Шах',
+		song : "О хорошем (1987)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Марина Капуро',
+		song : "Маменька (1989)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Анаит Каначян',
+		song : "Оставайся, мальчик, с нами (из м/ф В синем море в белой пене) (1984)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Надежда Чепрага',
+		song : "Кодры Молдовы (1982)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Татьяна Анциферова',
+		song : "Два листка (1985)"
+	},
+	{
+		pack : RU_1980_F_PACK_2,
+		group : 'Тамара Гвердцители',
+		song : "Виват, король! (1989)"
 	}
 ];
 
 let ru_1980_f_1 =	ru_1980_f.filter(item => item.pack == 1);
+let ru_1980_f_2 =	ru_1980_f.filter(item => item.pack == 2);
 
 
 let music = [
@@ -583,8 +628,12 @@ let music = [
 		type: 'f',
 		packs: [
 				{
-					arr: ru_1980_f,
-					name: 'RU 1980s Female: Medium',
+					arr: ru_1980_f_1,
+					name: 'RU 1980s Female: Medium'
+				},
+				{
+					arr: ru_1980_f_2,
+					name: 'RU 1980s Female: One-Hit Wonders'
 				}
 			]
 	}
